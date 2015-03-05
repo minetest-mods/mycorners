@@ -15,7 +15,7 @@ for i in ipairs(stone_corners) do
 	local img = stone_corners[i][3]
 	local item = stone_corners[i][4]
 
-minetest.register_node("mycorners:stone_"..mat.."_corner", {
+minetest.register_node("mycorners:light_stone_"..mat.."_corner", {
 	description = "Stone "..desc.." Corner",
 	drawtype = "normal",
 	paramtype = "light",
@@ -23,37 +23,36 @@ minetest.register_node("mycorners:stone_"..mat.."_corner", {
 		img..".png",
 		img..".png",
 		img..".png",
-		img..".png^corners_stone2.png",
+		img..".png^corners_stone4.png",
 		img..".png",
-		img..".png^corners_stone1.png",
+		img..".png^corners_stone3.png",
 		},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
 
 })
-
 minetest.register_craft({
-	output = "mycorners:stone_"..mat.."_corner 1",
+	output = "mycorners:light_stone_"..mat.."_corner 1",
 	recipe = {
-		{item,"mycorners:stone_corner_block",""},
-		{"mycorners:stone_corner_block","",""},
+		{item,"mycorners:light_stone_corner_block",""},
+		{"mycorners:light_stone_corner_block","",""},
 		{"","",""},
 	}
 })
 end
 
 --stone corner
-minetest.register_craftitem("mycorners:stone_corner_block", {
-	description = "Stone Corner Block",
-	inventory_image = "corners_stone1.png",
+minetest.register_craftitem("mycorners:light_stone_corner_block", {
+	description = "Light Stone Corner Block",
+	inventory_image = "corners_stone3.png",
 })
 
 minetest.register_craft({
-	output = "mycorners:stone_corner_block 16",
+	output = "mycorners:light_stone_corner_block 16",
 	recipe = {
-		{"default:cobble","",""},
-		{"default:cobble","default:cobble",""},
-		{"default:cobble","",""},
+		{"mycorners:stone_corner_block","",""},
+		{"dye:yellow","",""},
+		{"","",""},
 	}
 })

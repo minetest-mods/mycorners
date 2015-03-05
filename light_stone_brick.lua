@@ -3,10 +3,10 @@ local wood_corners = {   --Material , Description , Image , Item
 	{ "default_stone" , "Stone" , "default_stone", "default:stone"},	
 	{ "default_stone_brick" , "Stone Brick" , "default_stone_brick", "default:stonebrick"},
 	{ "default_brick" , "brick" , "default_brick", "default:brick"},
---	{ "default_wood" , "Wood" , "default_wood", "default:wood"},
---	{ "default_pinewood" , "Pine Wood" , "default_pinewood", "default:pinewood"},
+	{ "default_wood" , "Wood" , "default_wood", "default:wood"},
+	{ "default_pinewood" , "Pine Wood" , "default_pinewood", "default:pinewood"},
 	{ "default_sandstone" , "Sandstone " , "default_sandstone", "default:sandstone"},
---	{ "default_sandstone_brick" , "Sandstone Brick" , "default_sandstone_brick", "default:sandstonebrick"},
+	{ "default_sandstone_brick" , "Sandstone Brick" , "default_sandstone_brick", "default:sandstonebrick"},
 }
 
 for i in ipairs(wood_corners) do
