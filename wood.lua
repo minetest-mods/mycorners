@@ -1,7 +1,7 @@
 local wood_corners = {   --Material , Description , Image , Item
 	{ "default_cobble" , "Cobble" , "default_cobble", "default:cobble"},
 	{ "default_stone" , "Stone" , "default_stone", "default:stone"},	
---	{ "default_stone_brick" , "Stone Brick" , "default_stone_brick", "default:stonebrick"},
+	{ "default_stone_brick" , "Stone Brick" , "default_stone_brick", "default:stonebrick"},
 	{ "default_brick" , "brick" , "default_brick", "default:brick"},
 	{ "default_wood" , "Wood" , "default_wood", "default:wood"},
 	{ "default_pinewood" , "Pine Wood" , "default_pinewood", "default:pinewood"},
@@ -15,17 +15,17 @@ for i in ipairs(wood_corners) do
 	local img = wood_corners[i][3]
 	local item = wood_corners[i][4]
 
-minetest.register_node("brick_corners:stone_brick_"..mat.."_corner", {
-	description = "Stone Brick "..desc.." Corner",
+minetest.register_node("mycorners:wood_"..mat.."_corner", {
+	description = "Wood "..desc.." Corner",
 	drawtype = "normal",
 	paramtype = "light",
 	tiles = {
 		img..".png",
 		img..".png",
 		img..".png",
-		img..".png^corners_stone_brick2.png",
+		img..".png^corners_wood1.png",
 		img..".png",
-		img..".png^corners_stone_brick1.png",
+		img..".png^corners_wood2.png",
 		},
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -33,30 +33,28 @@ minetest.register_node("brick_corners:stone_brick_"..mat.."_corner", {
 
 })
 
-
-
 minetest.register_craft({
-	output = "brick_corners:stone_brick_"..mat.."_corner 1",
+	output = "mycorners:wood_"..mat.."_corner 1",
 	recipe = {
-		{item,"brick_corners:stone_brick_corner_block",""},
-		{"brick_corners:stone_brick_corner_block","",""},
+		{item,"mycorners:board",""},
+		{"mycorners:board","",""},
 		{"","",""},
 	}
 })
 
 end
 
---brick corner
-minetest.register_craftitem("brick_corners:stone_brick_corner_block", {
-	description = "Stone Brick Corner Block",
-	inventory_image = "corners_stone_brick1.png",
+--boards
+minetest.register_craftitem("mycorners:board", {
+	description = "Board",
+	inventory_image = "corners_wood1.png",
 })
 
 minetest.register_craft({
-	output = "brick_corners:stone_brick_corner_block 6",
+	output = "mycorners:board 18",
 	recipe = {
-		{"default:stonebrick","default:stonebrick",""},
-		{"default:stonebrick","",""},
-		{"","",""},
+		{"default:wood","",""},
+		{"default:wood","",""},
+		{"default:wood","",""},
 	}
 })

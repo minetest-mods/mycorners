@@ -16,7 +16,7 @@ for i in ipairs(wood_corners) do
 	local item = wood_corners[i][4]
 
 
-minetest.register_node("brick_corners:light_stone_brick_"..mat.."_corner", {
+minetest.register_node("mycorners:light_stone_brick_"..mat.."_corner", {
 	description = "Light Brick "..desc.." Corner",
 	drawtype = "normal",
 	paramtype = "light",
@@ -34,25 +34,25 @@ minetest.register_node("brick_corners:light_stone_brick_"..mat.."_corner", {
 
 })
 minetest.register_craft({
-	output = "brick_corners:light_stone_brick_"..mat.."_corner 1",
+	output = "mycorners:light_stone_brick_"..mat.."_corner 1",
 	recipe = {
-		{item,"brick_corners:light_stone_brick_corner_block",""},
-		{"brick_corners:light_stone_brick_corner_block","",""},
+		{item,"mycorners:light_stone_brick_corner_block",""},
+		{"mycorners:light_stone_brick_corner_block","",""},
 		{"","",""},
 	}
 })
 end
 
 --brick corner
-minetest.register_craftitem("brick_corners:light_stone_brick_corner_block", {
+minetest.register_craftitem("mycorners:light_stone_brick_corner_block", {
 	description = "Light Stone Brick Corner Block",
 	inventory_image = "corners_stone_brick3.png",
 })
 
 minetest.register_craft({
-	output = "brick_corners:light_stone_brick_corner_block 6",
+	output = "mycorners:light_stone_brick_corner_block 6",
 	recipe = {
-		{"brick_corners:stone_brick_corner_block","",""},
+		{"mycorners:stone_brick_corner_block","",""},
 		{"dye:yellow","",""},
 		{"","",""},
 	}
