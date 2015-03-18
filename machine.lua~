@@ -199,7 +199,7 @@ end,
 on_construct = function(pos)
 	local meta = minetest.env:get_meta(pos)
 	meta:set_string("formspec", "invsize[10,9;]"..
-		"background[-0.15,-0.25;10.40,9.75;mycorners_background.png]"..
+		"background[-0.15,-0.25;10.40,9.75;mysiding_background.png]"..
 		"label[0,0;Corner Installer:]"..
 		"label[1,1;Material]"..
 		"list[current_name;mat;1,2;1,1; ]"..
