@@ -18,7 +18,7 @@ local cornerblock = {
 {"wood_white", 	       "corners_wood_white.png",          "White Wood"},
 {"wood_yellow",        "corners_wood_yellow.png",         "Yellow Wood"},
 {"stone_black",           "corners_stone_black.png",          "Black Stone"},
-{"stone_blue",	          "corners_stone_blue.png",           "Blue Stone"},
+{"stone_blue",  	  "corners_stone_blue.png",           "Blue Brick"},
 {"stone_brown",           "corners_stone_brown.png",          "Brown Stone"},
 {"stone_cyan",            "corners_stone_cyan.png",           "Cyan Stone"},
 {"stone_dark_green",      "corners_stone_dark_green.png",     "Dark Green Stone"},
@@ -47,6 +47,7 @@ local cornerblock = {
 {"stonebrick_violet",         "corners_stonebrick_violet.png",         "Violet Stone Brick"},
 {"stonebrick_white", 	      "corners_stonebrick_white.png",          "White Stone Brick"},
 {"stonebrick_yellow",         "corners_stonebrick_yellow.png",         "Yellow Stone Brick"},
+
 }
 for i in ipairs(cornerblock) do
 	local mat = cornerblock[i][1]
@@ -61,15 +62,20 @@ minetest.register_craftitem("mycorners:corner_"..mat, {
 
 })
 
-
+local other_images = {
+		{"top","bottom"},
+		}
+for i in ipairs (other_images) do
+	local top = other_images[i][1]
+	local bottom = other_images[i][2]
 
 minetest.register_node("mycorners:cornerblock_"..material.."_"..mat, {
 	description = descr.."_Corner"..desc,
 	drawtype = "normal",
 	paramtype = "light",
 	tiles = {
-		image,
-		image,
+		image.."^corners_"..mat.."_"..top..".png",
+		image.."^corners_"..mat.."_"..bottom..".png",
 		image,
 		image.."^"..img.."^[transformFX",
 		image,
@@ -80,7 +86,7 @@ minetest.register_node("mycorners:cornerblock_"..material.."_"..mat, {
 	groups = {cracky = 2, not_in_creative_inventory=1},
 
 })
-
+end
 end
 end
 

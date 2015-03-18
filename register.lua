@@ -1,4 +1,4 @@
-
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_sandstone", 
 	"Sandstone", 
@@ -7,7 +7,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:sandstone",
 	"normal"
 	)
-
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_desert_sand", 
 	"Desert Sand", 
@@ -16,6 +17,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:desert_sand",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_clay", 
 	"Clay", 
@@ -24,6 +27,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:clay",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_cobble", 
 	"Cobble", 
@@ -32,6 +37,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:cobble",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_stone", 
 	"Stone", 
@@ -40,6 +47,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:stone",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_cactus", 
 	"Cactus", 
@@ -48,6 +57,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:cactus",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_sand", 
 	"Sand", 
@@ -56,6 +67,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:sand",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_desert_stone", 
 	"Desert Stone", 
@@ -64,6 +77,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:desert_stone",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, item
 	"default_wood", 
 	"Wood", 
@@ -72,6 +87,8 @@ mycorners.register_all(--material, description, image, groups, item
 	"default:wood",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_pinewood", 
 	"Pine Wood", 
@@ -80,6 +97,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:pinewood",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_dirt", 
 	"Dirt", 
@@ -88,6 +107,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:dirt",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_brick", 
 	"Brick", 
@@ -96,6 +117,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:brick",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_bronze_block", 
 	"Bronze Block", 
@@ -104,6 +127,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:bronzeblock",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_coal_block", 
 	"Coal Block", 
@@ -112,6 +137,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:coalblock",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_copper_block", 
 	"Copper Block", 
@@ -120,6 +147,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:copperblock",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_desert_cobble", 
 	"Desert Cobble", 
@@ -128,6 +157,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:desert_cobble",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_diamond_block", 
 	"Diamond Block", 
@@ -136,6 +167,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:diamondblock",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_glass", 
 	"Glass", 
@@ -144,6 +177,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:glass",
 	"glasslike"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_gold_block", 
 	"Gold Block", 
@@ -152,6 +187,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:goldblock",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_gravel", 
 	"Gravel", 
@@ -160,6 +197,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:gravel",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_ice", 
 	"Ice", 
@@ -168,6 +207,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:ice",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_jungletree", 
 	"Jungle Tree", 
@@ -176,6 +217,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:jungletree",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_junglewood", 
 	"Jungle Wood", 
@@ -184,6 +227,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:junglewood",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_lava", 
 	"Lava", 
@@ -192,6 +237,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:lava_source",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_mese", 
 	"Mese", 
@@ -200,6 +247,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:mese",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_mossycobble", 
 	"Mossy Cobble", 
@@ -208,6 +257,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:mossycobble",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_obsidian", 
 	"Obsidian", 
@@ -216,6 +267,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:obsidian",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item, drawtype
 	"default_obsidian_glass", 
 	"Obsidian Glass", 
@@ -224,6 +277,8 @@ mycorners.register_all(--material, description, image, groups, craft item, drawt
 	"default:obsidian_glass",
 	"glasslike"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_obsidian_brick", 
 	"Obsidian Brick", 
@@ -232,6 +287,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:obsidianbrick",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_pinetree", 
 	"Pine Tree", 
@@ -240,6 +297,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:pinetree",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_sandstone_brick", 
 	"Sandstone Brick", 
@@ -248,6 +307,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:sandstonebrick",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_snow", 
 	"Snow", 
@@ -256,6 +317,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:snowblock",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_steel_block", 
 	"Steel Block", 
@@ -264,6 +327,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:steelblock",
 	"normal"
 	)
+--]]
+---[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_stone_brick", 
 	"Stone Brick", 
@@ -272,6 +337,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:stonebrick",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_tree", 
 	"Tree", 
@@ -280,6 +347,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:tree",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_water", 
 	"Water", 
@@ -288,6 +357,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"default:water_source",
 	"normal"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item, drawtype
 	"farming_straw", 
 	"Straw", 
@@ -296,11 +367,11 @@ mycorners.register_all(--material, description, image, groups, craft item, drawt
 	"farming:straw",
 	"normal"
 	)
-
+--]]
 -----------------------------------------------------------------------------------------------------
 --wool
 
-
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_white", 
 	"White Wool", 
@@ -308,6 +379,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_white"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_black", 
 	"Black Wool", 
@@ -315,6 +388,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_black"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_blue", 
 	"Blue Wool", 
@@ -322,6 +397,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_blue"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_brown", 
 	"Brown Wool", 
@@ -329,6 +406,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_brown"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_cyan", 
 	"Cyan Wool", 
@@ -336,6 +415,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_cyan"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_dark_green", 
 	"Dark Green Wool", 
@@ -343,6 +424,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_dark_green"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_dark_grey", 
 	"Dark Grey Wool", 
@@ -350,6 +433,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_dark_grey"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_green", 
 	"Green Wool", 
@@ -357,6 +442,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_green"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_grey", 
 	"Grey Wool", 
@@ -364,6 +451,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_grey"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_magenta", 
 	"Magenta Wool", 
@@ -371,6 +460,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_magenta"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_orange", 
 	"Orange Wool", 
@@ -378,6 +469,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_orange"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_pink", 
 	"Pink Wool", 
@@ -385,6 +478,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_pink"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_red", 
 	"Red Wool", 
@@ -392,6 +487,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_red"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_violet", 
 	"Violet Wool", 
@@ -399,6 +496,8 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_violet"
 	)
+--]]
+--[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"wool_yellow", 
 	"Yellow Wool", 
@@ -406,7 +505,7 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"wool_yellow"
 	)
-
+--]]
 
 
 
