@@ -57,8 +57,9 @@ for i in ipairs(cornerblock) do
 
 --Makes the craft item corner
 minetest.register_craftitem("mycorners:corner_"..mat, {
---	description = desc.." Corner",
+	description = desc.." Corner",
 	inventory_image = img,
+	groups = {not_in_creative_inventory=1},
 
 })
 
