@@ -190,11 +190,7 @@ minetest.register_node("mycorners:machine_installer", {
 can_dig = function(pos,player)
 	local meta = minetest.env:get_meta(pos);
 	local inv = meta:get_inventory()
-	if not inv:is_empty("mat") then
-		return false
-	elseif not inv:is_empty("corner1") then
-		return false
-	elseif not inv:is_empty("corner2") then
+	if not inv:is_empty("ingot") then
 		return false
 	elseif not inv:is_empty("res") then
 		return false
