@@ -308,6 +308,16 @@ mycorners.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
+---[[
+mycorners.register_all(--material, description, image, groups, craft item
+	"default_desert_stone_brick", 
+	"Desert Stone Brick", 
+	"default_desert_stone_brick.png",
+	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
+	"default:desert_stonebrick",
+	"normal"
+	)
+--]]
 --[[
 mycorners.register_all(--material, description, image, groups, craft item
 	"default_snow", 
