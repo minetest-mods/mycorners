@@ -13,12 +13,12 @@ minetest.register_alias("mycorners:machine_installer", 	"mycorners:machine_corne
 minetest.register_node("mycorners:machine_corner", {
 	description = "Corner Machine",
 	tiles = {
-		"mycorners_machine_top.png^[transformR180",
+		"mycorners_machine_top.png",
 		"mycorners_machine_bottom.png",
-		"mycorners_machine_front.png",
-		"mycorners_machine_back.png",
 		"mycorners_machine_sider.png",
 		"mycorners_machine_sidel.png",
+		"mycorners_machine_back.png",
+		"mycorners_machine_front.png"
 		},
 	drawtype = "nodebox",
 	paramtype = "light",
@@ -27,18 +27,18 @@ minetest.register_node("mycorners:machine_corner", {
 	node_box = {
 		type = "fixed",
 		fixed = {
-			{0.375, -0.5, 0.375, 0.5, -0.125, 0.5},
-			{-0.5, -0.5, 0.375, -0.375, -0.125, 0.5},
-			{-0.5, -0.5, -0.5, -0.375, -0.125, -0.375},
-			{0.375, -0.5, -0.5, 0.5, -0.125, -0.375},
-			{-0.5, -0.125, -0.5, 0.5, 0, 0.5},
-			{0.1875, 0, -0.0625, 0.25, 0.125, 0},
-			{0.125, -0.375, -0.1875, 0.3125, -0.125, 0.125},
-			{0.0625, -0.375, -0.125, 0.375, -0.125, 0.0625},
-			{0, 0, -0.25, 0.0625, 0.1875, 0.25},
-			{-0.25, 0, -0.4375, -0.125, 0.125, 0.4375},
-			{-0.125, 0, -0.4375, 0, 0.25, 0.4375},
-			{0.0625, -0.1875, -0.1875, 0.375, -0.125, 0.125}, 
+			{0.3125, -0.5, -0.5, 0.5, -0.1875, -0.3125}, -- NodeBox1
+			{0.3125, -0.5, 0.3125, 0.5, -0.1875, 0.5}, -- NodeBox2
+			{-0.5, -0.5, 0.3125, -0.3125, -0.1875, 0.5}, -- NodeBox3
+			{-0.5, -0.5, -0.5, -0.3125, -0.1875, -0.3125}, -- NodeBox4
+			{-0.5, -0.1875, -0.5, 0.5, -0.0625, 0.5}, -- NodeBox5
+			{-0.0625, -0.0625, -0.25, 0, 0.0625, -0.1875}, -- NodeBox6
+			{-0.1875, -0.4375, -0.3125, 0.125, -0.1875, -0.125}, -- NodeBox7
+			{-0.125, -0.4375, -0.375, 0.0625, -0.1875, -0.0625}, -- NodeBox8
+			{-0.25, -0.0625, -0.1875, 0.1875, 0.125, 0.0625}, -- NodeBox9
+			{-0.4375, -0.0625, 0.125, 0.4375, 0.0625, 0.25}, -- NodeBox10
+			{-0.4375, -0.0625, -0, 0.4375, 0.1875, 0.125}, -- NodeBox11
+			{-0.1875, -0.25, -0.375, 0.125, -0.1875, -0.0625}, -- NodeBox12
 		}
 	},
 
