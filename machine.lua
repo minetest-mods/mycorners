@@ -14,7 +14,7 @@ minetest.register_node("mycorners:machine_corner", {
 	description = "Corner Machine",
 	tiles = {
 		"mycorners_machine_top.png",
-		"mycorners_machine_bottom.png",
+		"mycorners_machine_bottom.png^[transformR180",
 		"mycorners_machine_sider.png",
 		"mycorners_machine_sidel.png",
 		"mycorners_machine_back.png",
