@@ -1,14 +1,6 @@
 local USES = 200
 
-minetest.register_tool( "mycorners:corner_tool",{
-	description = "Corner Tool",
-	inventory_image = "mycorners_cornertool.png",
-	wield_image = "mycorners_cornertool.png",
-	on_use = function(itemstack, user, pointed_thing)
-
-
 local cornerblock = {
-
 {"wood_black",         "corners_wood_black.png",          "Black Wood"},
 {"wood_blue",  	       "corners_wood_blue.png",           "Blue Wood"},
 {"wood_brown", 	       "corners_wood_brown.png",          "Brown Wood"},
@@ -56,12 +48,6 @@ local cornerblock = {
 {"stonebrick_yellow",         "corners_stonebrick_yellow.png",         "Yellow Stone Brick"},
 
 }
-for i in ipairs(cornerblock) do
-	local mat = cornerblock[i][1]
-	local img = cornerblock[i][2]
-	local desc = cornerblock[i][3]
-
-
 
 local default_material = {
 		{"default:cobble", "default_cobble"},
@@ -79,31 +65,41 @@ local default_material = {
 		{"default:stonebrick","default_stone_brick"},
 		{"default:desert_stonebrick","default_desert_stone_brick"},
 		}
-for i in ipairs(default_material) do
-	local material = default_material[i][1]
-	local iname = default_material[i][2]
 
-
-
+minetest.register_tool( "mycorners:corner_tool",{
+	description = "Corner Tool",
+	inventory_image = "mycorners_cornertool.png",
+	wield_image = "mycorners_cornertool.png",
+	on_use = function(itemstack, user, pointed_thing)
 	if pointed_thing.type ~= "node" then
 		return
 	end
+for i in ipairs(cornerblock) do
+	local mat = cornerblock[i][1]
+	local img = cornerblock[i][2]
+	local desc = cornerblock[i][3]
 
+for i in ipairs(default_material) do
+	local material = default_material[i][1]
+	local iname = default_material[i][2]
 	local beside = user:get_wield_index()+1
 	local inv = user:get_inventory()
   	local istack = inv:get_stack("main", beside)
 	local pos = pointed_thing.under
 	local node = minetest.get_node(pos)
+	local cornr = "mycorners:corner_"..mat
 
 	if node.name == material and
-           inv:get_stack("main", user:get_wield_index()+1):get_name() == "mycorners:corner_"..mat
+           istack:get_name() == cornr
 	then
-	minetest.set_node(pos,{name = "mycorners:cornerblock_"..iname.."_"..mat, param2=minetest.dir_to_facedir(user:get_look_dir())})
-        user:get_inventory():remove_item("main", "mycorners:corner_"..mat.." 1");
+		minetest.set_node(pos,{name = "mycorners:cornerblock_"..iname.."_"..mat, param2=minetest.dir_to_facedir(user:get_look_dir())})
+        	user:get_inventory():remove_item("main", cornr.." 1");
+	break
 	end
+	break
+end
+end
 
-end
-end
 
 	if not minetest.setting_getbool("creative_mode") then
 		itemstack:add_wear(65535 / (USES - 1))
@@ -129,7 +125,6 @@ end,
 	return itemstack
 	end,
 })
-
 minetest.register_craft({
 		output = 'mycorners:corner_tool',
 		recipe = {
