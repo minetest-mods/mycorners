@@ -1,4 +1,18 @@
+local USES = 200
 
+local function rotate(x, max)
+	x = x + 1
+	if x > max then
+		x = 0
+	end
+	return x
+end
+
+minetest.register_tool( "mycorners:corner_tool",{
+	description = "Corner Tool",
+	inventory_image = "mycorners_cornertool.png",
+	wield_image = "mycorners_cornertool.png",
+	on_use = function(itemstack, user, pointed_thing)
 
 
 local cornerblock = {
@@ -57,9 +71,6 @@ for i in ipairs(cornerblock) do
 
 
 
-
---minetest.register_on_punchnode(function(pos, node, puncher, pointed_thing, itemstack)
-
 local default_material = {
 		{"default:cobble", "default_cobble"},
 		{"default:sandstone","default_sandstone"},
@@ -80,25 +91,69 @@ for i in ipairs(default_material) do
 	local material = default_material[i][1]
 	local iname = default_material[i][2]
 
-minetest.register_craftitem( "mycorners:corner_tool",{
-    description = "Corner Tool",
-    inventory_image = "mycorners_cornertool.png",
-    wield_image = "mycorners_cornertool.png",
+
+
+	if pointed_thing.type ~= "node" then
+		return
+	end
+
+	local beside = user:get_wield_index()+1
+	local inv = user:get_inventory()
+  	local istack = inv:get_stack("main", beside)
+	local pos = pointed_thing.under
+	local node = minetest.get_node(pos)
+
+	if node.name == material and
+           inv:get_stack("main", user:get_wield_index()+1):get_name() == "mycorners:corner_"..mat
+	then
+	minetest.set_node(pos,{name = "mycorners:cornerblock_"..iname.."_"..mat, param2=minetest.dir_to_facedir(user:get_look_dir())})
+        user:get_inventory():remove_item("main", "mycorners:corner_"..mat.." 1");
+	end
+
+end
+end
+
+	if not minetest.setting_getbool("creative_mode") then
+		itemstack:add_wear(65535 / (USES - 1))
+	end
+	return itemstack
+	
+
+end,
+
+	on_place = function(itemstack, placer, pointed_thing)
+	local pos = pointed_thing.under
+	local node = minetest.get_node(pos).name
+	local para = minetest.get_node(pos).param2
+	local newpara = para + 1
+		if newpara > 3 then
+		newpara = 0
+		end
+	minetest.set_node(pos,{name = ""..node, param2 = newpara})
+
+	if not minetest.setting_getbool("creative_mode") then
+		itemstack:add_wear(65535 / (USES - 1))
+	end
+	return itemstack
+	end,
 })
 
-    minetest.register_on_punchnode = (function(pos, node, puncher, pointed_thing)
---	local beside = puncher:get_wield_index()+1
---	local inv = puncher:get_inventory()
---  	local stack = inv:get_stack("main", beside)
---	local node = minetest.get_node(pos)
+minetest.register_craft({
+		output = 'mycorners:corner_tool',
+		recipe = {
+			{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
+			{'', 'default:steel_ingot', ''},
+			{'', "wool:blue", ''},		
+		},
+})
 
-	if puncher:get_wielded_item():get_name() == "mycorners:corner_tool"
-	and minetest.get_node(pos).name == material 
-        and puncher:get_inventory():get_stack("main", puncher:get_wield_index()+1):get_name() == "mycorners:corner_"..mat
-	then
-	minetest.set_node(pos,{name = "mycorners:cornerblock_"..iname.."_"..mat, param2=minetest.dir_to_facedir(puncher:get_look_dir())})
---	inv:take_item("main", beside)
-	end
-end)
-end
-end
+
+
+
+
+
+
+
+
+
+
