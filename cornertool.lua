@@ -1,13 +1,5 @@
 local USES = 200
 
-local function rotate(x, max)
-	x = x + 1
-	if x > max then
-		x = 0
-	end
-	return x
-end
-
 minetest.register_tool( "mycorners:corner_tool",{
 	description = "Corner Tool",
 	inventory_image = "mycorners_cornertool.png",
