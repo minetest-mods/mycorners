@@ -1,5 +1,4 @@
 local USES = 200
-
 local cornerblock = {
 {"wood_black",         "corners_wood_black.png",          "Black Wood"},
 {"wood_blue",  	       "corners_wood_blue.png",           "Blue Wood"},
@@ -46,9 +45,7 @@ local cornerblock = {
 {"stonebrick_violet",         "corners_stonebrick_violet.png",         "Violet Stone Brick"},
 {"stonebrick_white", 	      "corners_stonebrick_white.png",          "White Stone Brick"},
 {"stonebrick_yellow",         "corners_stonebrick_yellow.png",         "Yellow Stone Brick"},
-
 }
-
 local default_material = {
 		{"default:cobble", "default_cobble"},
 		{"default:sandstone","default_sandstone"},
@@ -56,7 +53,8 @@ local default_material = {
 		{"default:stone","default_stone"},
 		{"default:desert_stone","default_desert_stone"},
 		{"default:wood","default_wood"},
-		{"default:pinewood","default_pinewood"},
+		{"default:pine_wood","default_pine_wood"},
+		{"default:acacia_wood","default_acacia_wood"},
 		{"default:brick","default_brick"},
 		{"default:desert_cobble","default_desert_cobble"},
 		{"default:junglewood","default_junglewood"},
@@ -65,7 +63,6 @@ local default_material = {
 		{"default:stonebrick","default_stone_brick"},
 		{"default:desert_stonebrick","default_desert_stone_brick"},
 		}
-
 minetest.register_tool( "mycorners:corner_tool",{
 	description = "Corner Tool",
 	inventory_image = "mycorners_cornertool.png",
@@ -78,7 +75,6 @@ for i in ipairs(cornerblock) do
 	local mat = cornerblock[i][1]
 	local img = cornerblock[i][2]
 	local desc = cornerblock[i][3]
-
 for i in ipairs(default_material) do
 	local material = default_material[i][1]
 	local iname = default_material[i][2]
@@ -88,27 +84,21 @@ for i in ipairs(default_material) do
 	local pos = pointed_thing.under
 	local node = minetest.get_node(pos)
 	local cornr = "mycorners:corner_"..mat
-
 	if node.name == material and
            istack:get_name() == cornr
 	then
 		minetest.set_node(pos,{name = "mycorners:cornerblock_"..iname.."_"..mat, param2=minetest.dir_to_facedir(user:get_look_dir())})
-        	user:get_inventory():remove_item("main", cornr.." 1");
+        	user:get_inventory():remove_item("main", cornr.." 2");
 	break
 	end
 end
 end
-
-
 	if not minetest.setting_getbool("creative_mode") then
 		itemstack:add_wear(65535 / (USES - 1))
 	end
 	return itemstack
-	
-
 end,
-
-	on_place = function(itemstack, placer, pointed_thing)
+on_place = function(itemstack, placer, pointed_thing)
 	local pos = pointed_thing.under
 	local node = minetest.get_node(pos).name
 	local para = minetest.get_node(pos).param2
@@ -117,7 +107,6 @@ end,
 		newpara = 0
 		end
 	minetest.set_node(pos,{name = ""..node, param2 = newpara})
-
 	if not minetest.setting_getbool("creative_mode") then
 		itemstack:add_wear(65535 / (USES - 1))
 	end
@@ -129,17 +118,6 @@ minetest.register_craft({
 		recipe = {
 			{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
 			{'', 'default:steel_ingot', ''},
-			{'', "wool:blue", ''},		
+			{'', 'wool:blue', ''},		
 		},
 })
-
-
-
-
-
-
-
-
-
-
-

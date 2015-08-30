@@ -1,7 +1,5 @@
-function mycorners.register_all(material, descr, image)
-
+function mycorners.register_all(material, descr, image, groupss, itm)
 local cornerblock = {
-
 {"wood_black",         "corners_wood_black.png",          "Black Wood"},
 {"wood_blue",  	       "corners_wood_blue.png",           "Blue Wood"},
 {"wood_brown", 	       "corners_wood_brown.png",          "Brown Wood"},
@@ -47,33 +45,26 @@ local cornerblock = {
 {"stonebrick_violet",         "corners_stonebrick_violet.png",         "Violet Stone Brick"},
 {"stonebrick_white", 	      "corners_stonebrick_white.png",          "White Stone Brick"},
 {"stonebrick_yellow",         "corners_stonebrick_yellow.png",         "Yellow Stone Brick"},
-
 }
 for i in ipairs(cornerblock) do
 	local mat = cornerblock[i][1]
 	local img = cornerblock[i][2]
 	local desc = cornerblock[i][3]
-
-
 --Makes the craft item corner
 minetest.register_craftitem("mycorners:corner_"..mat, {
 	description = desc.." Corner",
 	inventory_image = img,
 	groups = {not_in_creative_inventory=1},
-
 })
-
 local other_images = {
 		{"top","bottom"},
 		}
 for i in ipairs (other_images) do
 	local top = other_images[i][1]
 	local bottom = other_images[i][2]
-
 minetest.register_node("mycorners:cornerblock_"..material.."_"..mat, {
 	description = descr.."_Corner"..desc,
 	drawtype = "normal",
-	paramtype = "light",
 	tiles = {
 		image.."^corners_"..mat.."_"..top..".png",
 		image.."^corners_"..mat.."_"..bottom..".png",
@@ -84,11 +75,19 @@ minetest.register_node("mycorners:cornerblock_"..material.."_"..mat, {
 		},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 2, not_in_creative_inventory=1},
-
+	groups = groupss,
+	drop = {
+		max_items = 3,
+		items = {
+			{
+			items = {itm},
+			},
+			{
+			items = {"mycorners:corner_"..mat.." 2"},
+			},
+		}
+		},
 })
 end
 end
 end
-
-
