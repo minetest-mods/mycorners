@@ -310,8 +310,8 @@ end
 minetest.register_craft({
 		output = 'mycorners:machine_corner',
 		recipe = {
-			{'', 'default:steel_ingot', 'default:wood'},
-			{'default:steelblock', 'default:steelblock', ''},
-			{'default:steelblock', "default:steelblock", ''},		
+			{'', '', ''},
+			{'group:wood', 'default:steel_ingot', 'group:wood'},
+			{'default:steelblock', "default:steelblock", 'default:steelblock"'},
 		},
 })

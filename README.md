@@ -1,23 +1,48 @@
 mycorners
 ========
-Code for machine based off of Noncubic by yves_de_beck
+Put decorative corners on blocks.
 
-mycorners adds corners to many default blocks.
+mycorners lets you add corners to nodes to add style to your buildings. 
+You will need to make a corner machine.
 
-Check it out on the forum
-https://forum.minetest.net/viewtopic.php?f=11&t=11363
+The craft for the machine is this
+
+empty      / empty        / empty
+wood       / steel ingot  / wood
+steelblock / steelblock   / steelblock
+
+Place the machine and right click on it.
+
+The top right has 2 slots. One for the material that you want your corners to be made of and the other for dye.
+You can only use wood, stone or stone brick for material.
+You can use any dye color.
+
+Click make and you will get your corners.
+
+To put the corners on a node you can either use the machine or the hammer.
+
+Machine
+
+Put the node you want a corner on in the top left of the group of 3 slots.
+Put corner boards in the other 2.
+Click make and take your nodes.
+
+
+Hammer
+
+Craft
+
+steel ingot / steel ingot  / steel ingot
+empty       / steel ingot  / empty
+empty       / blue wool    / empty
+
+
+Put you hammer in the top row of your inventory and put the corner boards beside it.
+Left click on the node you want to have corners. You can right click with the hammer to rotate the node.
+
 
 Licence - WTFPL
 
-To use simply craft a corner machine. Then put in wood, stone or stone brick. Click Make. This gives you your corner items.
-Then craft a corner installer machine. Put in the block you want a corner on and the corner items you want installed. Click Make.
-
-Craft
--------
-Corner Machine
---------------
-  	x		default:steel_ingiot		default:wood
-default:steelblock	default:steelblock			x
-default:steelblock	default:steelblock			x
+Forum - https://forum.minetest.net/viewtopic.php?f=11&t=11363
 
 
