@@ -300,11 +300,11 @@ mycorners.register_all(
 --]]
 --[[
 mycorners.register_all(
-	"default_pinetree", 
+	"default_pine_tree", 
 	"Pine Tree", 
 	"default_pinetree.png",
 	{choppy=2,oddly_breakable_by_hand=2,flammable=2,not_in_creative_inventory=1},
-	"default:pinetree",
+	"default:pine_tree",
 	"normal"
 	)
 --]]

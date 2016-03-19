@@ -1,5 +1,15 @@
 Put decorative corners on blocks.
 
+There is a setting in the init.lua file.
+If you want the full version then please change line 2 from false to true
+
+If all_colors is true then all dye colors are supported and many more nodes can accept corners.
+the issue is that it generates a lot of nodes and makes the game load slow.
+
+I all_colors is false only 4 dye colors are supported.
+Less options but loads fast and good for server use.
+
+
 mycorners lets you add corners to nodes to add style to your buildings. 
 You will need to make a corner machine.
 
