@@ -1,6 +1,6 @@
---Change this to true is you want all the colors and false for 4 colors
-local all_colors = false
-
+if minetest.setting_get("mycorners_all_colors") == false then
+	minetest.setting_set("mycorners_all_colors","false")
+end
 mycorners = {}
 
 dofile(minetest.get_modpath("mycorners").."/cornertool.lua")
@@ -8,7 +8,13 @@ dofile(minetest.get_modpath("mycorners").."/machine.lua")
 
 
 
-if all_colors == true then
+local settings = minetest.setting_get("mycorners_all_colors") or nil
+	if settings == nil then
+		settings = minetest.setting_set("mycorners_all_colors","false") 
+		settings = "false"
+	end
+
+if settings == true then
 
 	dofile(minetest.get_modpath("mycorners").."/nodes.lua")
 	dofile(minetest.get_modpath("mycorners").."/machine.lua")
