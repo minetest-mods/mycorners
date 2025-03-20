@@ -51,7 +51,8 @@ Put you hammer in the top row of your inventory and put the corner boards beside
 Left click on the node you want to have corners. You can right click with the hammer to rotate the node.
 
 
-Licence - DWYWPL
+Code Licence - MIT
+Media Licence - CC0
 
 Forum - https://forum.minetest.net/viewtopic.php?f=11&t=11363
 
